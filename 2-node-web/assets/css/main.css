@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #eee;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: unset;
+}
+
+
+ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-wrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.page-inner {
+    box-shadow: 0 0 10px #333;
+    padding: 10px;
+    margin: 20px;
+    background: #fff;
+}
+
+.todo-container {
+    border-top: 1px solid #333;
+    padding: 0;
+}
+
+.todo {
+    display: block;
+    background: #aaa;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.todo:hover {
+    background: #bbb;
+}
+
+.todo .done {
+    text-decoration: line-through;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.form {
+    margin: 10px;
+    text-align: left;
+}
+
+.form div {
+    display: block;
+}
+
+.form div label {
+    display: block;
+    font-size: 0.8em;
+    margin: 5px 10px;
+}
+
+.form div input[type=text], .form div input[type=submit], .form div input[type=checkbox] {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form div input[type=checkbox] {
+    display: inline-block;
+    width: auto;
+}
+
+.form div input[type=text] {
+    margin: 5px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.btn-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #aaa;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.btn-link:hover {
+    cursor: pointer;
+    background: #999;
+}

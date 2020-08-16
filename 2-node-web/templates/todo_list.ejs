@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="page-inner">
+            <h1 class="page-header">Todo List</h1>
+            <ul class="todo-container">
+                <% todos.forEach(function(todo) { %>
+                <a class="todo" href="/todo/<%=todo.id%>">
+                    <li class="<% if(todo.done) {%>done<% } %>">
+                        <%= todo.title %>
+                    </li>
+                </a>
+                <% }); %>
+                <a class="todo text-center text-bold" href="/create">+</a>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

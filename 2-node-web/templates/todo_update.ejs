@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Todo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="page-inner">
+            <h1>Update Todo</h1>
+            <form class="form" action="/todo/<%=todo.id%>/update" method="POST">
+                <div>
+                    <label>Title</label>
+                    <input type="text" name="title" value="<%=todo.title%>" />
+                </div>
+                <div class="text-left">
+                    <label>Done</label>
+                    <input type="checkbox" name="done" value="<%=todo.done%>" />
+                </div>
+                <div>
+                    <input type="submit" value="Save" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
