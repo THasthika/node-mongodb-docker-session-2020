@@ -67,12 +67,12 @@ app.post('/create', function(req, res) {
 })
 
 // update a todo given id
-app.post('/todo/:id/update', function(req, res) {
+app.post('/todo/:id/update', function(req, res, next) {
     const id = req.params.id;
     const title = req.body.title;
     const done = !!req.body.done;
     if (!id) {
-        throw new Error("Invalid ID");
+        return next(new Error("Invalid ID"));
     }
     db.updateTodo(id, {title: title, done: done}, function(todo) {
         res.redirect('/');
@@ -81,10 +81,10 @@ app.post('/todo/:id/update', function(req, res) {
 
 
 // remove a todo given id
-app.post('/todo/:id/delete', function(req, res) {
+app.post('/todo/:id/delete', function(req, res, next) {
     const id = req.params.id;
     if (!id) {
-        throw new Error("Invalid ID");
+        return next(new Error("Invalid ID"));
     }
     db.deleteTodo(id, function() {
         res.redirect('/');
