@@ -8,6 +8,10 @@
     - install the LTS version
 
 3. install docker
-    - **windows or mac** - install docker desktop https://www.docker.com/get-started
+    - **windows** - install docker desktop https://www.docker.com/get-started
+        - **you should have a PRO version of windows**
+    - **mac** - install docker desktop https://www.docker.com/get-started
     - **ubuntu** - https://docs.docker.com/engine/install/ubuntu/
     - **other linux** - Google "install docker in [your distro name]"
+
+4. install mongodb https://www.mongodb.com/try/download/community
