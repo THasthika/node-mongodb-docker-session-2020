@@ -1,2 +1,7 @@
 node_modules
 book-links.txt
+
+.idea/
+.vscode/
+
+5-docker-example/build
