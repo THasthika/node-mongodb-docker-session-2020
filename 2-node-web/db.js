@@ -7,11 +7,13 @@ function getTodos(callback) {
 }
 
 function getTodo(id, callback) {
-    callback(todos[id]);
+    const todo = todos[id];
+    callback(todo);
 }
 
-function createTodo(todo, callback) {
-    todo.id = nextId++;
+function createTodo(todo, callback) {\
+    todo.id = nextId;
+    nextId++;
     if (!todo.done) {
         todo.done = false;
     }

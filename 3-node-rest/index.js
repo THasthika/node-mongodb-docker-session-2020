@@ -20,8 +20,8 @@ app.use((req, res, next) => {
 })
 
 app.use((err, req, res, next) => {
-    console.error(err);
-    res.json({
+    // console.error(err);
+    res.status(404).json({
         status: "error"
     })
 })
