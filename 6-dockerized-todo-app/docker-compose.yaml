@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    ports:
+      - 9001:8080
+    depends_on:
+      - db
+  db:
+    image: mongo
+    restart: always
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - dbdata:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: todo
+volumes:
+  dbdata:

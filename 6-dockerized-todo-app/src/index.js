@@ -4,7 +4,7 @@ const morgan = require('morgan');
 
 const todo = require("./todo");
 
-const PORT = 80;
+const PORT = 8080;
 
 const app = express();
 
@@ -20,8 +20,8 @@ app.use((req, res, next) => {
 })
 
 app.use((err, req, res, next) => {
-    // console.error(err);
-    res.status(404).json({
+    console.error(err);
+    res.json({
         status: "error"
     })
 })
